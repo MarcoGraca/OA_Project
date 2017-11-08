@@ -1,12 +1,12 @@
-function[f]= flowvec(A,s)
+function[f]= flowvec(A,s,c,p)
 [~,edges]=size(A);
 [~,inst]=size(s);
 cvx_begin
     variables f(edges,inst)
-    minimize( norm(max(f,[],edges),1) )
+    minimize( dot(p,max(f,[],2)) )
     subject to
     for i = 1:inst
-        0<= f(:,i) <= 1;
+        0<= f(:,i) <= c(i);
         A*f(:,i)== -s(:,i);
     end
 cvx_end
