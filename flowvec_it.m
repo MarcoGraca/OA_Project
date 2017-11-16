@@ -20,8 +20,8 @@ minimize(tc)
 subject to
 for i = 1:inst
     0<= f1(:,i) <= r(:);
-    r(:) <= f2(:).*c(:);
-    0 <= f2(:) <= 1;
+    r <= f2.*c;
+    0 <= f2 <= 1;
     A*f1(:,i) == -s(:,i);
 end
 cvx_end
