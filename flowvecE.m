@@ -1,4 +1,4 @@
-function[f,r,tc]= flowvec(A,s,c,p,E)
+function[f,r,tc]= flowvec(A,s,c,p)
 [~,edges]=size(A);
 [~,inst]=size(s);
 cvx_begin
