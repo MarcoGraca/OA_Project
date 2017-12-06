@@ -15,7 +15,7 @@ for i = 1:inst
     0<= f1(:,i) <= r;
     r <= f2.*c;
     0 <= f2 <= 1;
-    A*f1(:,i) == -s(:,i);
+    A*f1(:,i) + s(:,i) <= 10^{-10};
 end
 cvx_end
 end
