@@ -1,0 +1,18 @@
+load('incidmatrix');
+load('overhea');
+load('c2');
+load('p2');
+load('E2');
+[~,edges]=size(A2);
+
+[~,g,~,~]= flowvec2(A2,s2,c2,p2,E2);
+
+for i=1:edges
+        if g(i)<0.1
+            g(i)=0;
+        else
+            g(i)=1;
+        end
+end
+
+[tc_v,r_v]= flowvecitfunc(A2,s2,c2,p2,E2,g);

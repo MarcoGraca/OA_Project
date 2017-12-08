@@ -15,7 +15,7 @@ for i = 1:inst
     0<= f(:,i) <= r;
     r <= g.*c;
     0 <= g <= 1;
-    A*f(:,i) + s(:,i) <= 10^{-10};
+    A*f(:,i) + s(:,i) <= 10^(-10);
 end
 cvx_end
 end
