@@ -13,7 +13,7 @@ for i = 1:inst
         0 <= f(:,i,j) <= r(:,j);
         f(:,i,j) <= r(:,j) <= l(j,1);
     end
-    A*(sum(f(:,i,:),3)) == -s(:,i);
+    A*(sum(f(:,i,:),3)) + s(:,i) <= 10^(-10);
 end
 cvx_end
 end
