@@ -1,3 +1,5 @@
+%% Parte 2 - Arestas com Overhead (Relaxação de aresta)
+
 load('incidmatrix');
 load('overheads');
 load('p1_group_31_scenarios');

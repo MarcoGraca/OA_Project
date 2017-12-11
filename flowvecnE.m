@@ -1,3 +1,5 @@
+%% Parte 1 - Custos Proporcionais
+
 function[f1,tc,r]= flowvecnE(A,s,c,p)
 
 [~,edges]=size(A);
@@ -16,5 +18,4 @@ function[f1,tc,r]= flowvecnE(A,s,c,p)
     end
     cvx_end
     
-disp(r);
 end
