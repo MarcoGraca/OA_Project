@@ -12,7 +12,7 @@ function[f1,tc,r]= flowvecnE(A,s,c,p)
     minimize(tc)
     subject to
     for i = 1:inst
-        A*f1(:,i)+s(:,i) <= 10^(-6);
+        A*f1(:,i)+s(:,i) <= 10^(-10);
         0 <= f1(:,i) <= r;
         r <= c;
     end
